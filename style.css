@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: none;
+    box-sizing: border-box;
+}
+
+/*------- ROOT -------*/
+:root {
+    --body-background: #0e0e0e;
+    --color-logo: #ff5b50;
+    --card-color: #252525;
+    --text-color: #fff;
+    --subtitle-color: #5a5757;
+    --black-text: #000;
+    --color-input: #0D0D0D;
+}
+
+/*-------- PADRÃO -------*/
+h1 {
+    font: 600 1.9rem 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+p,
+a {
+    color: var(--subtitle-color);
+    font: 500 0.8rem 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--body-background);
+}
+
+span {
+    color: var(--color-logo);
+}
+
+/*------ HEADER -------*/
+main {
+    width: 100vw;
+    height: 75vh;
+    background-image: url(./assets/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header {
+    padding: 1rem;
+}
+
+/*----- logo and button -----*/
+.headerMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: 0.5rem;
+}
+
+.connectWallet {
+    width: 12rem;
+    padding: 1rem;
+
+    background-image: url(./assets/logo_MetaMask.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 12px left 3px;
+    background-size: 1.5rem;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--black-text);
+    font: 700 0.8rem 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    outline: none;
+    transition: all 0.7s;
+}
+
+.connectWallet:hover {
+    background: #f38c85;
+    background-image: url(./assets/logo_MetaMask.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 12px left 3px;
+    background-size: 1.5rem;
+}
+
+/*------  nav ------*/
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 1rem 1rem 1rem;
+}
+
+/*----- home -----*/
+.text {
+    margin: 2rem;
+}
+
+.text p {
+    margin-top: 1rem;
+    color: #dacccc;
+}
+
+/*---- group avarts and banner ----*/
+.groupAvarts {
+    display: flex;
+    margin: 3rem 2rem;
+}
+
+.groupAvarts img {
+    width: 6rem;
+    height: 3rem;
+}
+
+.groupAvarts legend {
+    padding: 0.5rem 0 0 1rem;
+}
+
+.groupAvarts h1 {
+    font-size: 1rem;
+}
+
+/*---- table ----*/
+.table td img {
+    width: 6.3rem;
+    transition: all 0.7s;
+}
+
+.table td img:hover {
+    transform: scale(1.1);
+}
+
+/*---- ARTISTS - ITS NOT VISIBILITY IN PHONE ----*/
+#artists {
+    height: auto;
+    width: 100vw;
+    background-color: var(--body-background);
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.artistsTable {
+    margin: 4rem 2rem;
+    display: inline-block;
+}
+
+.artistsTable td {
+    padding: 1rem 0;
+}
+
+.banner {
+    width: 80vw;
+    height: 10rem;
+}
+
+/*---- POPULAR OF THE WEEK ------*/
+#popularOfTheWeek {
+    margin: 3rem 0 0 2rem;
+}
+
+.containerPopulerWeek {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.imgPopulerWeek {
+    width: 18rem;
+    margin-bottom: 2rem;
+}
+
+.firstLine {
+    display: flex;
+    margin: 0;
+}
+
+.firstLine p {
+    color: #fff;
+    font: 500 1.5rem 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    padding: 1rem 7rem 0 0;
+}
+
+.firstLine img {
+    width: 13px;
+    margin-top: 5px;
+    transition: all 0.7s;
+}
+
+.firstLine img:hover {
+    transform: translateX(-10px);
+}
+
+.secondLine {
+    display: flex;
+}
+
+.secondLine p {
+    font-style: italic;
+    font-size: 1rem;
+    padding: 1rem 4rem 1rem 0;
+
+}
+
+.divider {
+    width: 100vw;
+    margin: 4rem 0;
+    border-bottom: 1px solid rgb(99, 94, 94);
+}
+
+/*---- BEST ARTIST -----*/
+#bestArtist {
+    margin: 3rem 0;
+    height: 45vh;
+}
+
+#bestArtist h1 {
+    margin: 0 2rem;
+}
+
+.card {
+    width: 11rem;
+    height: 5rem;
+    background: var(--card-color);
+    display: flex;
+}
+
+.card p {
+    color: #fff;
+    letter-spacing: 2px;
+    font: 500 0.8rem 'Roboto', sans-serif;
+    margin: 1.3rem 0 1rem 0.5rem;
+}
+
+.card p span {
+    font-style: italic;
+}
+
+.card img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.2rem 0 0 0.3rem;
+}
+
+.jakeliny {
+    background: var(--color-logo);
+    color: #FFF;
+}
+
+.jakeliny span {
+    color: #000;
+    font-weight: 700;
+}
+
+.swiper {
+    width: 20rem;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.swiper-slide {
+    margin: 1rem 0.7rem; 
+    padding: 2rem 0;
+}
+
+.seeAllArtist {
+    color: #FFF;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.seeAllArtist img {
+    padding: 0 0.3rem;
+    width: 20px;
+    transition: all 0.7s;
+}
+
+.seeAllArtist img:hover {
+    transform: translateX(-7px);
+}
+
+/*---- FOOTER -----*/
+#footer {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--card-color);
+}
+
+.footer {
+    padding: 2rem 0 ;
+}
+
+.lineFooter {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background-image: url(./assets/arrow-black.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-logo);
+    padding: 1.5rem 2rem;
+    transition: background 0.7s;
+}
+
+.button:hover {
+    background-color: #f08f88;
+}
+
+.textFooter {
+    margin: 5rem 1rem;
+    text-align: center;
+}
+
+.textFooter p{
+    font: 500 1.5rem 'Poppins', sans-serif;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+/*-- INPUTS ---*/
+.input {
+    margin: 3rem 0;
+}
+
+input[type=email] {
+    width: 15rem;
+    padding: 0.5rem 2rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+input:hover, input:focus {
+    background-color: rgb(230, 223, 223);
+    color: #0D0D0D;
+}
+
+button[type=submit] {
+    width: 5rem;
+    padding: 0.5rem 1rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #0D0D0D;
+    color: #fff;
+}
+
+button[type=submit], input[type=email] {
+    outline: none;
+    border: none;
+    font: 700 1rem 'Poppins', sans-serif;
+    transition: all 0.7s;
+}
+
+/*--- TABLE ----*/
+.tableFooter {
+    margin: 2rem 0 3rem 0;
+}
+
+.tableFooter tr td {
+    padding: 0.5rem 2rem;
+}
+
+.firstLineTable  td p{
+    font: 700 1.2rem 'Roboto', sans-serif;
+    color: #FFF;
+}
+
+.otherLines td p{
+    font-size: 1rem;
+    font-family: 'Roboto';
+    transition: all 0.7s;
+}
+
+.otherLines td p:hover{
+    color: var(--color-logo);
+}
+
+
+.lastLine {
+    display: flex;
+    margin: 0;
+}
+
+.lastLine p {
+    margin-left: 3.5rem;
+    transition: all 0.7s;
+}
+
+.lastLine p:hover {
+    color: #FFF;
+}
+
+.icons {
+    padding: 0 2rem;
+}
+
+.icons img {
+    width: 1.3rem;
+    margin: 0 0.5rem;
+    transition: all 0.7s;
+}
+
+.icons img:hover {
+    transform: translateY(-8px);
+
+}
