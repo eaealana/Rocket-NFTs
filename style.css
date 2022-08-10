@@ -38,13 +38,20 @@ span {
     color: var(--color-logo);
 }
 
+.divider {
+    width: 100vw;
+    margin: 1rem 0;
+    border-bottom: 1px solid rgb(99, 94, 94);
+}
+
 /*------ HEADER -------*/
 main {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-image: url(./assets/background.png);
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 4rem;
 }
 
 #header {
@@ -72,10 +79,13 @@ main {
     letter-spacing: 1px;
     outline: none;
     transition: all 0.7s;
+    cursor: pointer;
 }
 
 .connectWallet:hover {
-    background: #f38c85;
+    background: #e01a0c;
+    color: #fff;
+    transform: scale(1.1);
 }
 
 /*------  nav ------*/
@@ -119,9 +129,13 @@ main {
     font-size: 1rem;
 }
 
-/*---- table ----*/
+/*---- TABLE -----*/
+.table {
+    width: 80%;
+}
+
 .table td img {
-    width: 5.5rem;
+    width: 5rem;
     transition: all 0.7s;
 }
 
@@ -137,6 +151,7 @@ main {
     opacity: 0;
     visibility: hidden;
     display: none;
+    padding-top: 1rem;
 }
 
 .artistsTable {
@@ -148,21 +163,16 @@ main {
     padding: 1rem 0;
 }
 
-.banner {
-    width: 80vw;
-    height: 10rem;
-}
-
 /*---- POPULAR OF THE WEEK ------*/
 #popularOfTheWeek {
-    padding: 4rem 0 0 2rem;
+    padding: 6rem 0 4rem 2rem;
     width: 100vw;
     background-color: #000;
-    height: 190vh
+    height: auto;
 }
 
 .containerPopulerWeek {
-    margin: 1rem 0 1rem 0.6rem;
+    margin: 1rem 0 2rem 1rem;
 }
 
 .imgPopulerWeek {
@@ -203,16 +213,10 @@ main {
 
 }
 
-.divider {
-    width: 100vw;
-    margin-bottom: 4rem;
-    border-bottom: 1px solid rgb(99, 94, 94);
-}
-
 /*---- BEST ARTIST -----*/
 #bestArtist {
-    margin: 1rem 0 3rem 0;
-    height: 45vh;
+    margin: 10rem 0;
+    height: auto;
 }
 
 #bestArtist h1 {
@@ -220,7 +224,7 @@ main {
 }
 
 .card {
-    width: 11rem;
+    width: auto;
     height: 5rem;
     background: var(--card-color);
     display: flex;
@@ -254,13 +258,14 @@ main {
 }
 
 .swiper {
-    width: 20rem;
+    width: 90vw;
     height: auto;
     margin: 1rem 0;
+    justify-content: left;
 }
 
 .swiper-slide {
-    margin: 1rem 0.7rem;
+    margin: 2rem 0.7rem;
     padding: 2rem 0;
 }
 
@@ -304,11 +309,14 @@ main {
     background-repeat: no-repeat;
     background-color: var(--color-logo);
     padding: 1.5rem 2rem;
-    transition: background 0.7s;
+    transition: all 0.7s;
+    cursor: pointer;
 }
 
 .button:hover {
-    background-color: #f08f88;
+    background-color: #e01a0c;
+    transform: translateY(-8px);
+    border-radius: 100%;
 }
 
 .textFooter {
@@ -332,12 +340,14 @@ input[type=email] {
     padding: 0.5rem 2rem;
     background-color: #000;
     color: #FFF;
+    transition: all 0.7s;
 }
 
-input:hover,
-input:focus {
-    background-color: rgb(230, 223, 223);
-    color: #0D0D0D;
+input[type=email]:hover,
+button[type=submit]:hover {
+    box-shadow: 0 0 10px #fff;
+    border-radius: 5px;
+    transform: scale(1.1);
 }
 
 button[type=submit] {
@@ -345,17 +355,12 @@ button[type=submit] {
     padding: 0.5rem 1rem;
 }
 
-button:hover {
-    transform: scale(1.1);
-    background-color: #0D0D0D;
-    color: #fff;
-}
-
 button[type=submit],
 input[type=email] {
     outline: none;
     border: none;
     font: 700 1rem 'Poppins', sans-serif;
+    cursor: pointer;
     transition: all 0.7s;
 }
 
@@ -377,12 +382,12 @@ input[type=email] {
     font-size: 1rem;
     font-family: 'Roboto';
     transition: all 0.7s;
+    cursor: pointer;
 }
 
 .otherLines td p:hover {
     color: var(--color-logo);
 }
-
 
 .lastLine {
     display: flex;
@@ -392,6 +397,7 @@ input[type=email] {
 .lastLine p {
     margin-left: 2rem;
     transition: all 0.7s;
+    cursor: pointer;
 }
 
 .lastLine p:hover {
@@ -400,6 +406,7 @@ input[type=email] {
 
 .icons {
     padding: 0 2rem;
+    cursor: pointer;
 }
 
 .icons img {
@@ -410,52 +417,19 @@ input[type=email] {
 
 .icons img:hover {
     transform: translateY(-8px);
-
 }
 
+/*--- MIN WIDTH 400PX --------*/
 @media (min-width: 400px) {
-    main {
-        height: 100vh;
-    }
-
-    /*--- button ----*/
-    .connectWallet {
-        width: 11rem;
-        font: 700 0.8rem 'Poppins', sans-serif;
-    }
-
-    .connectWallet:hover {
-        background-position: bottom 12px left 1px;
-    }
-
-    /*---- group avarts ----*/
-    .groupAvarts {
-        display: flex;
-        margin: 4rem 2rem;
-    }
-
-    .groupAvarts img {
-        width: 7rem;
-        height: 3.5rem;
-    }
-
-    .groupAvarts h1 {
-        font-size: 1.2rem;
-    }
 
     /*---- table ----*/
     .table td img {
-        width: 5rem;
+        width: 6.1rem;
     }
 
     /*---- POPULAR OF THE WEEK ------*/
-    #popularOfTheWeek {
-        height: 195vh;
-        background-color: #000;
-    }
-
     .containerPopulerWeek {
-        padding: 1rem 0 0 0;
+        padding: 1rem 0 0 1rem;
     }
 
     /*---- BEST ARTIST -----*/
@@ -464,7 +438,7 @@ input[type=email] {
     }
 
     .card {
-        width: 11.2rem;
+        width: auto;
     }
 
     .swiper-slide {
@@ -477,45 +451,715 @@ input[type=email] {
 
     /*--- FOOTER - TABLE and ICON ----*/
     .tableFooter {
-        margin: 2rem 0 3.4rem 1rem;
-    }
-
-    .icons {
-        padding-left: 3rem;
+        margin: 2rem 0 3rem 1rem;
     }
 }
 
+/*--- MIN WIDTH 430PX --------*/
+@media (min-width: 430px) {
 
-@media (min-width: 400px) {
     /*---- table ----*/
     .table td img {
-        width: 7.1rem;
+        width: 6.6rem;
     }
 
     /*---- POPULAR OF THE WEEK ------*/
-    #popularOfTheWeek {
-        height: 195vh;
-        width: 100vw;
-    }
-
     .containerPopulerWeek {
-        padding: 1rem 0 1rem 3rem;
+        padding: 1rem 0 0 1.5rem;
     }
 
-    /*---- BEST ARTIST -----*/
-    #bestArtist h1 {
-        margin: 0 2rem;
+    /*--- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 2rem;
+    }
+
+    .lastLine {
+        margin: 1.1rem 0 0 2rem;
+    }
+}
+
+/*--- MIN WIDTH 450PX --------*/
+@media (min-width: 450px) {
+
+    /*---- table ----*/
+    .table td img {
+        width: 6.8rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 2rem;
+    }
+
+    /*--- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 3rem;
+    }
+
+    .lastLine {
+        margin: 1.1rem 0 0 3rem;
+    }
+
+}
+
+/*--- MIN WIDTH 470PX --------*/
+@media (min-width: 470px) {
+
+    /*---- button ----*/
+    .connectWallet {
+        width: 11rem;
+        padding: 0 1rem;
+        font-size: 0.7rem;
+    }
+
+    /*---- table ----*/
+    .table td img {
+        width: 7.2rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 2.7rem;
+    }
+}
+
+/*--- MIN WIDTH 500PX --------*/
+@media (min-width: 500px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /*---- table ----*/
+    .table td img {
+        width: 7.4rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 4rem;
+    }
+
+    .cards {
+        padding-left: 0.5rem;
     }
 
     .card {
-        width: 11.2rem;
+        width: auto;
+    }
+
+    .card p {
+        margin: 1.4rem 0 1rem 1rem;
+    }
+
+    .card img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 1.2rem 0 0 0.5rem;
+    }
+
+    .swiper {
+        width: auto;
+        height: auto;
     }
 
     .swiper-slide {
-        margin: 1rem 0.9rem;
+        margin: 2rem 0;
+        padding: 0;
     }
 
-    .seeAllArtist {
+    /* --- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 4rem;
+    }
+
+    .lastLine {
+        padding-left: 1rem;
+    }
+
+    .icons {
+        padding-left: 2rem;
+    }
+}
+
+/*--- MIN WIDTH 530PX --------*/
+@media (min-width: 530px) {
+
+    /*---- table ----*/
+    .table {
+        margin-left: 0;
+    }
+
+    .table td img {
+        width: 7.9rem;
+        border: 1px solid #fff;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 5rem;
+    }
+
+    /* --- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 5rem;
+    }
+
+    .icons {
+        padding-left: 3.7rem;
+    }
+}
+
+/*--- MIN WIDTH 550PX --------*/
+@media (min-width: 550px) {
+
+    /*---- table ----*/
+    .table {
+        margin-left: 1rem;
+    }
+
+    .table td img {
+        width: 8rem;
+    }
+
+    .swiper-slide {
+        margin: 3rem 0;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 5.5rem;
+    }
+
+    /*--- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 3rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 2.5rem;
+    }
+
+    .lastLine p {
+        margin: 1rem 0 0 1.8rem;
+    }
+
+    .icons {
+        padding: 1rem 0 0 6rem;
+    }
+}
+
+/*--- MIN WIDTH 570PX --------*/
+@media (min-width: 570px) {
+
+    /*---- table ----*/
+    .table {
+        margin-left: 0.5rem;
+    }
+
+    .table td img {
+        width: 8.50rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 6rem;
+    }
+
+    .swiper-slide {
+        margin: 3rem 0 !important;
+    }
+
+    /*--- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 3rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 2.5rem;
+    }
+
+    .lastLine p {
+        margin: 1rem 0 0 2rem;
+    }
+
+    .icons {
+        padding: 1rem 0 0 6rem;
+    }
+}
+
+/*--- MIN WIDTH 600PX --------*/
+@media (min-width: 600px) {
+    .connectWallet {
+        width: 12rem;
+        height: 3rem;
+        margin-top: 0.5rem;
+    }
+
+    /*------  home and group avatars ------*/
+    .groupAvarts {
+        margin-left: 2.5rem;
+    }
+
+    .groupAvarts img {
+        width: 6rem;
+        height: 3rem;
+    }
+
+    /*--- table ----*/
+    .table {
+        padding-left: 1.8rem;
+    }
+
+    .table td img {
+        width: 8.2rem;
+        margin: 2px;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .imgPopulerWeek {
+        width: 20rem;
+        padding-bottom: 5rem;
+    }
+
+    .firstLine img {
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    /*---- BEST ARTIST -----*/
+    .card {
+        width: auto;
+    }
+
+    .swiper {
+        width: 90vw;
+        height: auto;
+        margin: 2rem 1rem;
+    }
+}
+
+/*--- MIN WIDTH 630PX --------*/
+@media (min-width: 630px) {
+
+    /*---- table ----*/
+    .table {
+        margin-left: 0.5rem;
+    }
+
+    .table td img {
+        width: 8.4rem;
+    }
+
+    /*---- ARTISTS ----*/
+    #artists {
+        height: auto;
+        width: 100vw;
+        background-color: var(--body-background);
+        opacity: 1;
+        visibility: visible;
+        display: inline;
+    }
+
+    .textArtists {
+        display: flex;
+        text-align-last: left;
+        margin: 2rem 0 2rem 2rem;
+    }
+
+    .textArtists span {
+        font-style: italic;
+        border-bottom: 1px solid var(--color-logo);
+        transition: all 0.7s;
+    }
+
+    .textArtists span:hover {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .textLeft,
+    .textRight {
+        margin: 3rem 5rem 0 0;
+    }
+
+    .artistsTable {
+        margin: 0 1rem 0 1rem;
+        display: flex;
+        border-right: 1px solid #252525;
+        padding-right: 2rem;
+    }
+
+    .artistsTable h1 {
+        font-size: 1.8rem;
+    }
+
+    .artistsTable td {
+        padding: 1.5rem 0;
+    }
+
+    .banner {
+        display: inline;
+        padding-top: 1rem;
+        width: 100vw;
+        height: auto;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 7rem;
+    }
+
+    .imgPopulerWeek {
+        width: auto;
+    }
+    
+    .firstLine p {
+        padding: 1rem 9rem 0 0;
+    }
+    
+    .firstLine img {
+        margin-top: 22px;
+        transition: all 0.7s;
+    }
+
+    .firstLine img:hover {
+        border-bottom: 1px solid #fff;
+    }
+    
+    .secondLine p {
+        padding: 1rem 6rem 1rem 0;
+    }
+    /*---- BEST ARTIST -----*/
+    .card {
+        height: 6rem;
+        width: auto;
+    }
+
+    .card p {
+        margin-left: 1.2rem;
+    }
+
+    .card img {
+        margin-left: 1rem;
+    }
+
+    .swiper-slide {
+        margin: 0 0.3rem;
+    }
+
+    /*--- FOOTER - TABLE and ICON ----*/
+    .tableFooter {
+        margin: 2rem 0 3rem 6.5rem;
+    }
+
+    .lastLine p {
+        margin: 1rem 0 0 5.7rem;
+    }
+}
+
+/*----- MIN  WIDTH 650PX ------*/
+@media (min-width: 650px) {
+
+    /*---- table ----*/
+    .table {
+        margin-left: 0.4rem;
+    }
+
+    .table td img {
+        width: 8.7rem;
+        height: 4.5rem;
+        margin: 2px;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 8.4rem;
+    }
+
+    .card img {
+        margin-top: 1.2rem;
+        width: 3rem;
+        height: 3rem
+    }
+
+    .card p {
+        margin-top: 1.7rem;
+    }
+
+    /*----- ARTIST ------*/
+    .textArtists {
+        margin: 2rem 0 2rem 2rem;
+    }
+
+    .textArtists p,
+    .textArtists span {
         font-size: 1rem;
+    }
+}
+
+/*----- MIN  WIDTH 670PX ------*/
+@media (min-width: 670px) {
+
+    /*---- table ----*/
+    .table td img {
+        width: 9rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 8.5rem;
+    }
+
+    /*---- footer ----*/
+    .tableFooter {
+        margin-left: 5.4rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 3rem;
+    }
+
+    .lastLine p {
+        margin-left: 5rem;
+    }
+
+    .icons {
+        margin-left: 2.4rem;
+    }
+}
+
+/*----- MIN  WIDTH 700PX ------*/
+@media (min-width: 700px) {
+
+    /*---- table ----*/
+    .table td img {
+        width: 9.5rem;
+        height: 4.7rem;
+    }
+
+    /*---- card ----*/
+    .card p {
+        margin-top: 1.7rem;
+    }
+
+    .card img {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+    }
+}
+
+/*----- MIN  WIDTH 730PX ------*/
+@media (min-width: 730px) {
+    .headerMenu {
+        width: 95%;
+    }
+
+    /*---- table ----*/
+    .table td img {
+        width: 10rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 10rem;
+    }
+
+    /*---- footer ----*/
+    .tableFooter {
+        margin-left: 4rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 4rem;
+    }
+
+    .icons {
+        margin-left: 5rem;
+    }
+}
+
+/*----- MIN  WIDTH 800PX ------*/
+@media (min-width: 800px) {
+    .text p {
+        font-size: 1rem;
+    }
+
+    /*---- table ----*/
+    .table td img {
+        width: 11rem;
+        height: 5.5rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 12rem;
+    }
+
+    /*---- footer ----*/
+    .tableFooter {
+        margin-left: 4rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 5rem;
+    }
+
+    .icons {
+        margin-left: 11rem;
+    }
+}
+
+/*----- MIN  WIDTH 830PX ------*/
+@media (min-width: 830px) {
+    .text {
+        margin: 1rem 3rem;
+    }
+
+    .groupAvarts {
+        margin: 2rem 3.2rem;
+    }
+
+    /*---- table ----*/
+    .table {
+        margin: 0 1rem
+    }
+
+    .table td img {
+        width: 11rem;
+        height: 5.2rem;
+        margin: 2px 5px;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 13rem;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    /*---- footer ----*/
+    .tableFooter {
+        margin-left: 5rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 5rem;
+    }
+
+    .lastLine p {
+        margin-left: 6.3rem;
+    }
+
+    .icons {
+        margin-left: 10rem;
+    }
+}
+
+/*----- MIN  WIDTH 860PX ------*/
+@media (min-width: 860px) {
+    .table td img {
+        width: 11rem;
+        height: 5rem;
+        margin: 2px 5px;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 14rem;
+    }
+
+    /*---- footer ----*/
+    .tableFooter {
+        margin-left: 5.5rem;
+    }
+
+    .lastLine p {
+        margin-left: 7rem
+    }
+}
+
+/*----- MIN  WIDTH 900PX ------*/
+@media (min-width: 900px) {
+    .text {
+        margin: 1rem 0 1rem 4rem;
+    }
+
+    .groupAvarts {
+        margin: 2rem 0 2rem 4.2rem;
+    }
+
+    .table {
+        margin-left: 2rem;
+    }
+
+    .table td img {
+        width: 11rem;
+        height: 5rem;
+        margin: 2px 5px;
+    }
+
+    /*---- card -----*/
+    .card {
+        width: auto;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        margin: 1.6rem 0 0 0.5rem;
+    }
+
+    .card img {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 1rem 0.5rem 0 1rem;
+    }
+
+    /*---- POPULAR OF THE WEEK ------*/
+    .containerPopulerWeek {
+        padding: 1rem 0 0 16rem;
+    }
+
+    /*---- footer ----*/
+    .tableFooter {
+        margin-left: 7rem;
+    }
+
+    .lastLine p {
+        margin-left: 8.5rem
+    }
+}
+
+/*----- MIN WIDTH 930PX -------*/
+@media (min-width: 930px) {
+    .table td img {
+        width: 12rem;
+        height: 6rem;
+    }
+
+    /*--- footer ---*/
+    .tableFooter {
+        margin-left: 8.5rem;
+    }
+
+    .lastLine {
+        margin: 2rem auto;
+    }
+}
+
+/*---- MIN WIDTH 1000px -----*/
+@media (min-width: 1000px) {
+    .table td img {
+        width: 13rem
+    }
+
+    /*---- footer ---*/
+    .tableFooter {
+        margin-left: 10rem;
+    }
+
+    .lastline p {
+        margin-left:0;
     }
 }
