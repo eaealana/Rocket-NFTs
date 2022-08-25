@@ -361,8 +361,12 @@ button[type=submit]:hover {
     padding: 0.5rem 1.5rem;
 }
 
+.tableFooter {
+    margin: 1rem auto;
+}
+
 .textFooter {
-    margin: 0 0.7rem;
+    margin: 1rem auto;
 }
 
 .firstLineTable td p {
@@ -425,345 +429,351 @@ button[type=submit]:hover {
     .swiper-slide {
         margin: 1rem 0.9rem;
     }
-}
 
-/*--- MIN WIDTH 430PX --------*/
-@media (min-width: 430px) {
-
-    /*---- table ----*/
-    .table {
-        margin-left: 4px;
+    .tableFooter {
+        margin: 1rem auto;
     }
 
-    .table td img {
-        width: 6rem;
-        margin-left: 3px;
-    }
-}
 
-/*--- MIN WIDTH 450PX --------*/
-@media (min-width: 450px) {
+    /*--- MIN WIDTH 430PX --------*/
+    @media (min-width: 430px) {
 
-    /*---- table ----*/
-    .table td img {
-        width: 6.3rem;
-    }
+        /*---- table ----*/
+        .table {
+            margin-left: 4px;
+        }
 
-    .table {
-        margin-left: 4px;
+        .table td img {
+            width: 6rem;
+            margin-left: 3px;
+        }
     }
 
-    /*--- footer ---*/
-    .icons {
-        padding-left: 1rem;
-    }
-}
+    /*--- MIN WIDTH 450PX --------*/
+    @media (min-width: 450px) {
 
-/*--- MIN WIDTH 470PX --------*/
-@media (min-width: 470px) {
+        /*---- table ----*/
+        .table td img {
+            width: 6.3rem;
+        }
 
-    /*---- table ----*/
-    .table td img {
-        width: 6.5rem;
-    }
+        .table {
+            margin-left: 4px;
+        }
 
-    .table {
-        margin-left: 0.8rem;
-    }
-}
+        /*--- footer ---*/
+        .icons {
+            padding-left: 1rem;
+        }
 
-/*--- MIN WIDTH 500PX --------*/
-@media (min-width: 500px) {
-
-    /*---- table ----*/
-    .table td img {
-        width: 6.8rem;
     }
 
-    /*---- popular of week ---*/
-    .containerPopularWeek img {
-        width: 16rem;
+    /*--- MIN WIDTH 470PX --------*/
+    @media (min-width: 470px) {
+
+        /*---- table ----*/
+        .table td img {
+            width: 6.5rem;
+        }
+
+        .table {
+            margin-left: 0.8rem;
+        }
     }
 
-    .firstLine,
-    .secondLine {
-        padding: 0.3rem 0;
+    /*--- MIN WIDTH 500PX --------*/
+    @media (min-width: 500px) {
+
+        /*---- table ----*/
+        .table td img {
+            width: 6.8rem;
+        }
+
+        /*---- popular of week ---*/
+        .containerPopularWeek img {
+            width: 16rem;
+        }
+
+        .firstLine,
+        .secondLine {
+            padding: 0.3rem 0;
+        }
+
+        .firstLine img {
+            width: 1rem;
+            height: 0.8rem;
+            margin: 0.3rem 0 0 7.5rem;
+            transition: all 0.7s;
+        }
+
+        .secondLine p {
+            padding-right: 8.6rem;
+        }
+
+        .secondLine .p-jakeliny {
+            padding-right: 9rem;
+        }
+
+        .secondLine .joaoInacio {
+            padding-right: 7rem;
+        }
+
+        .secondLine .mayk {
+            padding-right: 7.8rem;
+        }
+
+        /*---- card ----*/
+        .card {
+            width: auto;
+        }
+
+        .card img {
+            margin: 1.2rem 0 0 0.6rem;
+        }
+
+        /*--- footer ---*/
+        .icons {
+            padding-left: 1.5rem;
+        }
+
+        .icons img {
+            margin-left: 10px;
+        }
     }
 
-    .firstLine img {
-        width: 1rem;
-        height: 0.8rem;
-        margin: 0.3rem 0 0 7.5rem;
-        transition: all 0.7s;
+    /*--- MIN WIDTH 550PX --------*/
+    @media (min-width: 550px) {
+
+        #home {
+            margin: 3rem 1.5rem 2rem 2rem;
+        }
+
+        #popularOfTheWeek h1 {
+            margin: 0 1rem 1rem 1rem
+        }
+
+        .connectWallet {
+            padding: 0.5rem 2.3rem;
+        }
+
+        /*---- table ----*/
+        .table td img {
+            width: 7.2rem;
+        }
+
+        .table {
+            margin: 0 1rem 0 2rem;
+        }
     }
 
-    .secondLine p {
-        padding-right: 8.6rem;
+    /*--- MIN WIDTH 600PX --------*/
+    @media (min-width: 600px) {
+
+        /*---- table ----*/
+        .table td img {
+            width: 7.5rem;
+        }
+
+        .table tr td {
+            padding: 0.2rem;
+        }
+
+        /*--- footer ---*/
+        .icons {
+            margin-left: 6rem;
+        }
+
+        .tableFooter tr td {
+            padding: 0.5rem 3rem
+        }
     }
 
-    .secondLine .p-jakeliny {
-        padding-right: 9rem;
+    /*--- MIN WIDTH 650PX --------*/
+    @media (min-width: 650px) {
+        .groupAvarts {
+            margin-left: 0.5rem;
+        }
+
+        /*---- table ----*/
+        .table td img {
+            width: 7.9rem;
+        }
     }
 
-    .secondLine .joaoInacio {
-        padding-right: 7rem;
+    /*--- MIN WIDTH 700PX --------*/
+    @media (min-width: 700px) {
+        .text {
+            margin-right: 0.8rem;
+        }
+
+        /*---- table ----*/
+        .table td img {
+            width: 9rem;
+        }
     }
 
-    .secondLine .mayk {
-        padding-right: 7.8rem;
+    /*--- MIN WIDTH 750PX --------*/
+    @media (min-width: 750px) {
+
+        /*---- table ----*/
+        .table td img {
+            width: 9.5rem;
+        }
     }
 
-    /*---- card ----*/
-    .card {
-        width: auto;
+    /*--- MIN WIDTH 800PX --------*/
+    @media (min-width: 800px) {
+        .headerMenu {
+            padding: 0.8rem;
+        }
+
+        /*---- table ----*/
+        .table td img {
+            width: 10.5rem;
+        }
     }
 
-    .card img {
-        margin: 1.2rem 0 0 0.6rem;
+    /*--- MIN WIDTH 850PX --------*/
+    @media (min-width: 850px) {
+
+        /*---- group avatars ---*/
+        .groupAvarts img {
+            width: 7rem;
+            height: 3rem;
+        }
+
+        /*---- table ----*/
+        .table td img {
+            width: 11.2rem;
+        }
+
+        /*---- popular of week ---*/
+        .containerPopularWeek img {
+            width: auto;
+        }
+
+        .firstLine img {
+            width: 1.2rem;
+            height: 0.8rem;
+            margin: 0.4rem 0 0 13rem;
+            transition: all 0.7s;
+        }
+
+        .secondLine p,
+        .secondLine .p-jakeliny {
+            padding-right: 14.5rem;
+        }
+
+        .secondLine .joaoInacio {
+            padding-right: 13rem;
+        }
+
+        .secondLine .mayk {
+            padding-right: 13.5rem;
+        }
     }
 
-    /*--- footer ---*/
-    .icons {
-        padding-left: 1.5rem;
+    /*---- MIN WIDTH 900PX ----*/
+    @media (min-width: 900px) {
+
+        /*---- header ---*/
+        .connectWallet {
+            padding: 1rem 3.5rem;
+            font-size: 0.8rem;
+        }
+
+        /*--- home ---*/
+        .table td img {
+            width: 12rem;
+        }
+
+        /*--- footer ---*/
+        .icons {
+            margin-left: 13rem;
+        }
+
+        .tableFooter tr td {
+            padding: 0.5rem 4.7rem
+        }
     }
 
-    .icons img {
-        margin-left: 10px;
-    }
-}
+    /*---- MIN WIDTH 950PX ----*/
+    @media (min-width: 950px) {
 
-/*--- MIN WIDTH 550PX --------*/
-@media (min-width: 550px) {
-
-    #home {
-        margin: 3rem 1.5rem 2rem 2rem;
+        /*--- home ---*/
+        .table td img {
+            width: 12.7rem;
+        }
     }
 
-    #popularOfTheWeek h1 {
-        margin: 0 1rem 1rem 1rem
+    /*---- MIN WIDTH 1000PX ----*/
+    @media (min-width: 1000px) {
+
+        /*--- home ---*/
+        .table td img {
+            width: 13.6rem;
+        }
     }
 
-    .connectWallet {
-        padding: 0.5rem 2.3rem;
+    /*---- MIN WIDTH 1000PX ----*/
+    @media (min-width: 1000px) {
+
+        /*--- home ---*/
+        .table td img {
+            width: 13.9rem;
+        }
+
+        .text p {
+            font-size: 1rem;
+        }
+
     }
 
-    /*---- table ----*/
-    .table td img {
-        width: 7.2rem;
+    /*---- MIN WIDTH 1050PX ----*/
+    @media (min-width: 1050px) {
+        .table tr td {
+            padding: 5px 0.5rem;
+        }
     }
 
-    .table {
-        margin: 0 1rem 0 2rem;
-    }
-}
+    /*---- MIN WIDTH 1100PX ----*/
+    @media (min-width: 1100px) {
+        .table tr td {
+            padding: 5px 0.7rem;
+        }
 
-/*--- MIN WIDTH 600PX --------*/
-@media (min-width: 600px) {
-
-    /*---- table ----*/
-    .table td img {
-        width: 7.5rem;
-    }
-
-    .table tr td {
-        padding: 0.2rem;
+        .table td img {
+            width: 14.5rem;
+            height: 7rem
+        }
     }
 
-    /*--- footer ---*/
-    .icons {
-        margin-left: 6rem;
+    /*---- MIN WIDTH 1150PX ----*/
+    @media (min-width: 1150px) {
+        .table tr td {
+            padding: 5px 0.9rem;
+        }
     }
 
-    .tableFooter tr td {
-        padding: 0.5rem 3rem
-    }
-}
-
-/*--- MIN WIDTH 650PX --------*/
-@media (min-width: 650px) {
-    .groupAvarts {
-        margin-left: 0.5rem;
+    /*---- MIN WIDTH 1200PX ----*/
+    @media (min-width: 1200px) {
+        .table tr td {
+            padding: 5px 1.2rem;
+        }
     }
 
-    /*---- table ----*/
-    .table td img {
-        width: 7.9rem;
-    }
-}
+    /*---- MIN WIDTH 1250PX -----*/
+    @media (min-width:1250px) {
+        #home {
+            margin: 2rem 4rem;
+        }
 
-/*--- MIN WIDTH 700PX --------*/
-@media (min-width: 700px) {
-    .text {
-        margin-right: 0.8rem;
-    }
+        .table {
+            margin: 2rem 3rem;
+        }
 
-    /*---- table ----*/
-    .table td img {
-        width: 9rem;
-    }
-}
-
-/*--- MIN WIDTH 750PX --------*/
-@media (min-width: 750px) {
-
-    /*---- table ----*/
-    .table td img {
-        width: 9.5rem;
-    }
-}
-
-/*--- MIN WIDTH 800PX --------*/
-@media (min-width: 800px) {
-    .headerMenu {
-        padding: 0.8rem;
-    }
-
-    /*---- table ----*/
-    .table td img {
-        width: 10.5rem;
-    }
-}
-
-/*--- MIN WIDTH 850PX --------*/
-@media (min-width: 850px) {
-
-    /*---- group avatars ---*/
-    .groupAvarts img {
-        width: 7rem;
-        height: 3rem;
-    }
-
-    /*---- table ----*/
-    .table td img {
-        width: 11.2rem;
-    }
-
-    /*---- popular of week ---*/
-    .containerPopularWeek img {
-        width: auto;
-    }
-
-    .firstLine img {
-        width: 1.2rem;
-        height: 0.8rem;
-        margin: 0.4rem 0 0 13rem;
-        transition: all 0.7s;
-    }
-
-    .secondLine p,
-    .secondLine .p-jakeliny {
-        padding-right: 14.5rem;
-    }
-
-    .secondLine .joaoInacio {
-        padding-right: 13rem;
-    }
-
-    .secondLine .mayk {
-        padding-right: 13.5rem;
-    }
-}
-
-/*---- MIN WIDTH 900PX ----*/
-@media (min-width: 900px) {
-
-    /*---- header ---*/
-    .connectWallet {
-        padding: 1rem 3.5rem;
-        font-size: 0.8rem;
-    }
-
-    /*--- home ---*/
-    .table td img {
-        width: 12rem;
-    }
-
-    /*--- footer ---*/
-    .icons {
-        margin-left: 13rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 4.7rem
-    }
-}
-
-/*---- MIN WIDTH 950PX ----*/
-@media (min-width: 950px) {
-
-    /*--- home ---*/
-    .table td img {
-        width: 12.7rem;
-    }
-}
-
-/*---- MIN WIDTH 1000PX ----*/
-@media (min-width: 1000px) {
-
-    /*--- home ---*/
-    .table td img {
-        width: 13.6rem;
-    }
-}
-
-/*---- MIN WIDTH 1000PX ----*/
-@media (min-width: 1000px) {
-
-    /*--- home ---*/
-    .table td img {
-        width: 13.9rem;
-    }
-
-    .text p {
-        font-size: 1rem;
-    }
-
-}
-
-/*---- MIN WIDTH 1050PX ----*/
-@media (min-width: 1050px) {
-    .table tr td {
-        padding: 5px 0.5rem;
-    }
-}
-
-/*---- MIN WIDTH 1100PX ----*/
-@media (min-width: 1100px) {
-    .table tr td {
-        padding: 5px 0.7rem;
-    }
-
-    .table td img {
-        width: 14.5rem;
-        height: 7rem
-    }
-}
-
-/*---- MIN WIDTH 1150PX ----*/
-@media (min-width: 1150px) {
-    .table tr td {
-        padding: 5px 0.9rem;
-    }
-}
-
-/*---- MIN WIDTH 1200PX ----*/
-@media (min-width: 1200px) {
-    .table tr td {
-        padding: 5px 1.2rem;
-    }
-}
-
-/*---- MIN WIDTH 1250PX -----*/
-@media (min-width:1250px) {
-    #home {
-        margin: 2rem 4rem;
-    }
-
-    .table {
-        margin: 2rem 3rem;
-    }
-
-    .table td img {
-        width: 15.2rem;
+        .table td img {
+            width: 15.2rem;
+        }
     }
 }
