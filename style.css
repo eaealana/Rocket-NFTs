@@ -358,7 +358,7 @@ button[type=submit]:hover {
 }
 
 .textFooter {
-    margin: 0 0.7rem;
+    margin: 1rem auto;
 }
 
 .firstLineTable td p {
@@ -420,11 +420,6 @@ button[type=submit]:hover {
 
     .swiper-slide {
         margin: 1rem 0.9rem;
-    }
-
-    /*--- FOOTER ----*/
-    .tableFooter {
-        margin: 1rem auto;
     }
 }
 
