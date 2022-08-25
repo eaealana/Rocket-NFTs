@@ -357,6 +357,10 @@ button[type=submit]:hover {
     padding: 0.5rem 1.5rem;
 }
 
+.tableFooter {
+    margin: 1rem auto;
+}
+
 .textFooter {
     margin: 1rem auto;
 }
@@ -421,6 +425,10 @@ button[type=submit]:hover {
     .swiper-slide {
         margin: 1rem 0.9rem;
     }
+
+    .tableFooter {
+        margin: 1rem auto;
+    }
 }
 
 /*--- MIN WIDTH 430PX --------*/
@@ -453,6 +461,7 @@ button[type=submit]:hover {
     .icons {
         padding-left: 1rem;
     }
+
 }
 
 /*--- MIN WIDTH 470PX --------*/
