@@ -39,38 +39,42 @@ span {
 }
 
 .divider {
-    width: 100vw;
+    width: 100%;
     margin: 1rem 0;
     border-bottom: 1px solid rgb(99, 94, 94);
 }
 
-/*------ HEADER -------*/
+/*---- HOME -----*/
 main {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    background-image: url(./assets/background.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(./assets/background.png) no-repeat center;
     padding-bottom: 4rem;
 }
 
-#header {
-    padding: 1rem;
+/*---- links ----*/
+#header .links {
+    display: flex;
+    justify-content: center;
 }
 
-/*----- logo and button -----*/
+#header .links .link {
+    padding: 0 0.5rem;
+}
+
+#header .links .link:hover {
+    color: #fff;
+}
+
+/*---- logo and button ----*/
 .headerMenu {
     display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    padding-top: 0.5rem;
+    margin: 1rem 0.5rem;
 }
 
 .connectWallet {
-    width: 7.8rem;
-    height: 3rem;
+    padding: 0.5rem 1rem;
     background-color: var(--text-color);
     border: none;
     border-radius: 10px;
@@ -88,134 +92,115 @@ main {
     transform: scale(1.1);
 }
 
-/*------  nav ------*/
-.links {
-    display: flex;
-    justify-content: center;
-}
-
-.links a {
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 1rem 1rem 1rem;
-}
-
-/*----- home -----*/
-.text {
-    margin: 2rem;
+/*---- home ----*/
+#home {
+    margin: 2rem 1rem;
 }
 
 .text p {
-    margin-top: 1rem;
-    color: #dacccc;
+    padding: 1rem 0;
 }
 
-/*---- group avarts ----*/
+/*---- group avatars ---*/
 .groupAvarts {
     display: flex;
-    margin: 3rem 2rem;
+    margin-left: 0.3rem;
 }
 
 .groupAvarts img {
     width: 6rem;
     height: 3rem;
+    margin: 0.2rem 0.7rem 1rem 0;
 }
 
-.groupAvarts legend {
-    padding: 0.5rem 0 0 1rem;
-}
-
-.groupAvarts h1 {
+.groupAvarts legend h1 {
     font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
-/*---- TABLE -----*/
-.table {
-    width: 80%;
-}
-
+/*--- table ---*/
 .table td img {
-    width: 5rem;
+    margin-left: 5px;
+    width: 5.4rem;
+    border: 1px solid #fff;
     transition: all 0.7s;
 }
 
 .table td img:hover {
     transform: scale(1.1);
+    border: 2px solid var(--color-logo);
 }
 
-/*---- ARTISTS - ITS NOT VISIBILITY IN PHONE ----*/
+/*----- ARTIST (is not visibily in mobile) ------*/
 #artists {
-    height: auto;
-    width: 100vw;
-    background-color: var(--body-background);
-    opacity: 0;
-    visibility: hidden;
     display: none;
-    padding-top: 1rem;
+    opacity: 0;
+    z-index: 0;
 }
 
-.artistsTable {
-    margin: 4rem 2rem;
-    display: inline-block;
-}
-
-.artistsTable td {
-    padding: 1rem 0;
-}
-
-/*---- POPULAR OF THE WEEK ------*/
+/*------- POPULAR OF THE WEEK -----*/
 #popularOfTheWeek {
-    padding: 6rem 0 4rem 2rem;
-    width: 100vw;
-    background-color: #000;
-    height: auto;
+    padding: 3rem 1rem;
+    background: #000;
 }
 
-.containerPopulerWeek {
-    margin: 1rem 0 2rem 1rem;
+.containerPopularWeek {
+    text-align: center;
 }
 
-.imgPopulerWeek {
-    width: 18rem;
-    padding-bottom: 2rem;
+.containers {
+    margin: 2rem 0;
 }
 
-.firstLine {
+.containerPopularWeek img {
+    width: 13rem;
+}
+
+.firstLine,
+.secondLine {
     display: flex;
-    margin: 0;
+    justify-content: center;
+    padding: 0.2rem 0;
 }
 
-.firstLine p {
+.p-popularOfTheWeek {
     color: #fff;
-    font: 500 1.5rem 'Roboto', sans-serif;
+    font: 500 1.2rem 'Roboto', sans-serif;
     letter-spacing: 1px;
-    padding: 1rem 7rem 0 0;
 }
 
 .firstLine img {
-    width: 13px;
-    margin-top: 5px;
+    width: 1rem;
+    height: 0.8rem;
+    margin: 0.3rem 0 0 4.3rem;
     transition: all 0.7s;
 }
 
 .firstLine img:hover {
-    transform: translateX(-10px);
-}
-
-.secondLine {
-    display: flex;
+    transform: translateX(-15px);
+    border-bottom: 1px solid #fff;
 }
 
 .secondLine p {
+    padding-right: 5rem;
     font-style: italic;
-    font-size: 1rem;
-    padding: 1rem 4rem 1rem 0;
+}
 
+.secondLine .p-jakeliny {
+    padding-right: 5.7rem;
+}
+
+.secondLine .joaoInacio {
+    padding-right: 4rem;
+}
+
+.secondLine .mayk {
+    padding-right: 4.7rem;
 }
 
 /*---- BEST ARTIST -----*/
 #bestArtist {
-    margin: 10rem 0;
+    margin: 4rem 0 5rem 0;
     height: auto;
 }
 
@@ -224,7 +209,7 @@ main {
 }
 
 .card {
-    width: auto;
+    width: 11.2rem;
     height: 5rem;
     background: var(--card-color);
     display: flex;
@@ -286,9 +271,10 @@ main {
     transform: translateX(-7px);
 }
 
+
 /*---- FOOTER -----*/
 #footer {
-    width: 100vw;
+    width: 100%;
     height: auto;
     background-color: var(--card-color);
 }
@@ -303,10 +289,12 @@ main {
     justify-content: space-between;
 }
 
+.lineFooter h1 {
+    margin-top: 0.5rem;
+}
+
 .button {
-    background-image: url(./assets/arrow-black.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(./assets/arrow-black.svg) no-repeat center;
     background-color: var(--color-logo);
     padding: 1.5rem 2rem;
     transition: all 0.7s;
@@ -320,7 +308,7 @@ main {
 }
 
 .textFooter {
-    margin: 5rem 1rem;
+    margin: 5rem auto;
     text-align: center;
 }
 
@@ -343,13 +331,6 @@ input[type=email] {
     transition: all 0.7s;
 }
 
-input[type=email]:hover,
-button[type=submit]:hover {
-    box-shadow: 0 0 10px #fff;
-    border-radius: 5px;
-    transform: scale(1.1);
-}
-
 button[type=submit] {
     width: 5rem;
     padding: 0.5rem 1rem;
@@ -364,23 +345,29 @@ input[type=email] {
     transition: all 0.7s;
 }
 
-/*--- TABLE ----*/
-.tableFooter {
-    margin: 2rem 0 3rem 0;
+input[type=email]:hover,
+button[type=submit]:hover {
+    box-shadow: 0 0 10px #fff;
+    border-radius: 5px;
+    transform: scale(1.1);
 }
 
+/*--- TABLE ----*/
 .tableFooter tr td {
     padding: 0.5rem 1.5rem;
 }
 
+.textFooter {
+    margin: 0 0.7rem;
+}
+
 .firstLineTable td p {
-    font: 700 1.2rem 'Roboto', sans-serif;
+    font: 700 1.1rem 'Roboto', sans-serif;
     color: #FFF;
 }
 
 .otherLines td p {
-    font-size: 1rem;
-    font-family: 'Roboto';
+    font: 500 0.9rem 'Roboto', sans-serif;
     transition: all 0.7s;
     cursor: pointer;
 }
@@ -391,11 +378,10 @@ input[type=email] {
 
 .lastLine {
     display: flex;
-    margin: 0;
+    justify-content: center;
 }
 
 .lastLine p {
-    margin-left: 2rem;
     transition: all 0.7s;
     cursor: pointer;
 }
@@ -405,13 +391,13 @@ input[type=email] {
 }
 
 .icons {
-    padding: 0 2rem;
     cursor: pointer;
+    padding-left: 2rem;
 }
 
 .icons img {
     width: 1.3rem;
-    margin: 0 0.5rem;
+    margin-left: 0.5rem;
     transition: all 0.7s;
 }
 
@@ -424,34 +410,21 @@ input[type=email] {
 
     /*---- table ----*/
     .table td img {
-        width: 6.1rem;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 1rem;
+        width: 5.4rem;
     }
 
     /*---- BEST ARTIST -----*/
-    #bestArtist h1 {
-        margin: 0 2rem;
-    }
-
     .card {
-        width: auto;
+        width: 13rem;
     }
 
     .swiper-slide {
         margin: 1rem 0.9rem;
     }
 
-    .seeAllArtist {
-        font-size: 1rem;
-    }
-
-    /*--- FOOTER - TABLE and ICON ----*/
+    /*--- FOOTER ----*/
     .tableFooter {
-        margin: 2rem 0 3rem 1rem;
+        margin: 1rem auto;
     }
 }
 
@@ -459,22 +432,13 @@ input[type=email] {
 @media (min-width: 430px) {
 
     /*---- table ----*/
+    .table {
+        margin-left: 4px;
+    }
+
     .table td img {
-        width: 6.6rem;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 1.5rem;
-    }
-
-    /*--- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 2rem;
-    }
-
-    .lastLine {
-        margin: 1.1rem 0 0 2rem;
+        width: 6rem;
+        margin-left: 3px;
     }
 }
 
@@ -483,33 +447,105 @@ input[type=email] {
 
     /*---- table ----*/
     .table td img {
-        width: 6.8rem;
+        width: 6.3rem;
     }
 
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 2rem;
+    .table {
+        margin-left: 4px;
     }
 
-    /*--- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 3rem;
+    /*--- footer ---*/
+    .icons {
+        padding-left: 1rem;
     }
-
-    .lastLine {
-        margin: 1.1rem 0 0 3rem;
-    }
-
 }
 
 /*--- MIN WIDTH 470PX --------*/
 @media (min-width: 470px) {
 
-    /*---- button ----*/
+    /*---- table ----*/
+    .table td img {
+        width: 6.5rem;
+    }
+
+    .table {
+        margin-left: 0.8rem;
+    }
+}
+
+/*--- MIN WIDTH 500PX --------*/
+@media (min-width: 500px) {
+
+    /*---- table ----*/
+    .table td img {
+        width: 6.8rem;
+    }
+
+    /*---- popular of week ---*/
+    .containerPopularWeek img {
+        width: 16rem;
+    }
+
+    .firstLine,
+    .secondLine {
+        padding: 0.3rem 0;
+    }
+
+    .firstLine img {
+        width: 1rem;
+        height: 0.8rem;
+        margin: 0.3rem 0 0 7.5rem;
+        transition: all 0.7s;
+    }
+
+    .secondLine p {
+        padding-right: 8.6rem;
+    }
+
+    .secondLine .p-jakeliny {
+        padding-right: 9rem;
+    }
+
+    .secondLine .joaoInacio {
+        padding-right: 7rem;
+    }
+
+    .secondLine .mayk {
+        padding-right: 7.8rem;
+    }
+
+    /*---- card ----*/
+    .card {
+        width: auto;
+    }
+
+    .card img {
+        margin: 1.2rem 0 0 0.6rem;
+    }
+
+    /*--- footer ---*/
+    .icons {
+        padding-left: 1.5rem;
+    }
+
+    .icons img {
+        margin-left: 10px;
+    }
+}
+
+/*--- MIN WIDTH 550PX --------*/
+@media (min-width: 550px) {
+
+    #home {
+        margin: 3rem 1.5rem 2rem 2rem;
+    }
+
+    #popularOfTheWeek h1 {
+        margin: 0 1rem 1rem 1rem
+    }
+
     .connectWallet {
-        width: 11rem;
-        padding: 0 1rem;
-        font-size: 0.7rem;
+        padding: 0.5rem 2.3rem;
     }
 
     /*---- table ----*/
@@ -517,649 +553,217 @@ input[type=email] {
         width: 7.2rem;
     }
 
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 2.7rem;
-    }
-}
-
-/*--- MIN WIDTH 500PX --------*/
-@media (min-width: 500px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    /*---- table ----*/
-    .table td img {
-        width: 7.4rem;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 4rem;
-    }
-
-    .cards {
-        padding-left: 0.5rem;
-    }
-
-    .card {
-        width: auto;
-    }
-
-    .card p {
-        margin: 1.4rem 0 1rem 1rem;
-    }
-
-    .card img {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: 1.2rem 0 0 0.5rem;
-    }
-
-    .swiper {
-        width: auto;
-        height: auto;
-    }
-
-    .swiper-slide {
-        margin: 2rem 0;
-        padding: 0;
-    }
-
-    /* --- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 4rem;
-    }
-
-    .lastLine {
-        padding-left: 1rem;
-    }
-
-    .icons {
-        padding-left: 2rem;
-    }
-}
-
-/*--- MIN WIDTH 530PX --------*/
-@media (min-width: 530px) {
-
-    /*---- table ----*/
     .table {
-        margin-left: 0;
-    }
-
-    .table td img {
-        width: 7.9rem;
-        border: 1px solid #fff;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 5rem;
-    }
-
-    /* --- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 5rem;
-    }
-
-    .icons {
-        padding-left: 3.7rem;
-    }
-}
-
-/*--- MIN WIDTH 550PX --------*/
-@media (min-width: 550px) {
-
-    /*---- table ----*/
-    .table {
-        margin-left: 1rem;
-    }
-
-    .table td img {
-        width: 8rem;
-    }
-
-    .swiper-slide {
-        margin: 3rem 0;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 5.5rem;
-    }
-
-    /*--- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 3rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 2.5rem;
-    }
-
-    .lastLine p {
-        margin: 1rem 0 0 1.8rem;
-    }
-
-    .icons {
-        padding: 1rem 0 0 6rem;
-    }
-}
-
-/*--- MIN WIDTH 570PX --------*/
-@media (min-width: 570px) {
-
-    /*---- table ----*/
-    .table {
-        margin-left: 0.5rem;
-    }
-
-    .table td img {
-        width: 8.50rem;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 6rem;
-    }
-
-    .swiper-slide {
-        margin: 3rem 0 !important;
-    }
-
-    /*--- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 3rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 2.5rem;
-    }
-
-    .lastLine p {
-        margin: 1rem 0 0 2rem;
-    }
-
-    .icons {
-        padding: 1rem 0 0 6rem;
+        margin: 0 1rem 0 2rem;
     }
 }
 
 /*--- MIN WIDTH 600PX --------*/
 @media (min-width: 600px) {
-    .connectWallet {
-        width: 12rem;
-        height: 3rem;
-        margin-top: 0.5rem;
-    }
 
-    /*------  home and group avatars ------*/
-    .groupAvarts {
-        margin-left: 2.5rem;
-    }
-
-    .groupAvarts img {
-        width: 6rem;
-        height: 3rem;
-    }
-
-    /*--- table ----*/
-    .table {
-        padding-left: 1.8rem;
-    }
-
+    /*---- table ----*/
     .table td img {
-        width: 8.2rem;
-        margin: 2px;
+        width: 7.5rem;
     }
 
-    /*---- POPULAR OF THE WEEK ------*/
-    .imgPopulerWeek {
-        width: 20rem;
-        padding-bottom: 5rem;
+    .table tr td {
+        padding: 0.2rem;
     }
 
-    .firstLine img {
-        margin-top: 1.5rem;
-        margin-left: 2rem;
+    /*--- footer ---*/
+    .icons {
+        margin-left: 6rem;
     }
 
-    /*---- BEST ARTIST -----*/
-    .card {
-        width: auto;
-    }
-
-    .swiper {
-        width: 90vw;
-        height: auto;
-        margin: 2rem 1rem;
+    .tableFooter tr td {
+        padding: 0.5rem 3rem
     }
 }
 
-/*--- MIN WIDTH 630PX --------*/
-@media (min-width: 630px) {
-
-    /*---- table ----*/
-    .table {
+/*--- MIN WIDTH 650PX --------*/
+@media (min-width: 650px) {
+    .groupAvarts {
         margin-left: 0.5rem;
     }
 
-    .table td img {
-        width: 8.4rem;
-    }
-
-    /*---- ARTISTS ----*/
-    #artists {
-        height: auto;
-        width: 100vw;
-        background-color: var(--body-background);
-        opacity: 1;
-        visibility: visible;
-        display: inline;
-    }
-
-    .textArtists {
-        display: flex;
-        text-align-last: left;
-        margin: 2rem 0 2rem 2rem;
-    }
-
-    .textArtists span {
-        font-style: italic;
-        border-bottom: 1px solid var(--color-logo);
-        transition: all 0.7s;
-    }
-
-    .textArtists span:hover {
-        color: #fff;
-        border-bottom: 1px solid #fff;
-    }
-
-    .textLeft,
-    .textRight {
-        margin: 3rem 5rem 0 0;
-    }
-
-    .artistsTable {
-        margin: 0 1rem 0 1rem;
-        display: flex;
-        border-right: 1px solid #252525;
-        padding-right: 2rem;
-    }
-
-    .artistsTable h1 {
-        font-size: 1.8rem;
-    }
-
-    .artistsTable td {
-        padding: 1.5rem 0;
-    }
-
-    .banner {
-        display: inline;
-        padding-top: 1rem;
-        width: 100vw;
-        height: auto;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 7rem;
-    }
-
-    .imgPopulerWeek {
-        width: auto;
-    }
-    
-    .firstLine p {
-        padding: 1rem 9rem 0 0;
-    }
-    
-    .firstLine img {
-        margin-top: 22px;
-        transition: all 0.7s;
-    }
-
-    .firstLine img:hover {
-        border-bottom: 1px solid #fff;
-    }
-    
-    .secondLine p {
-        padding: 1rem 6rem 1rem 0;
-    }
-    /*---- BEST ARTIST -----*/
-    .card {
-        height: 6rem;
-        width: auto;
-    }
-
-    .card p {
-        margin-left: 1.2rem;
-    }
-
-    .card img {
-        margin-left: 1rem;
-    }
-
-    .swiper-slide {
-        margin: 0 0.3rem;
-    }
-
-    /*--- FOOTER - TABLE and ICON ----*/
-    .tableFooter {
-        margin: 2rem 0 3rem 6.5rem;
-    }
-
-    .lastLine p {
-        margin: 1rem 0 0 5.7rem;
-    }
-}
-
-/*----- MIN  WIDTH 650PX ------*/
-@media (min-width: 650px) {
-
     /*---- table ----*/
-    .table {
-        margin-left: 0.4rem;
-    }
-
     .table td img {
-        width: 8.7rem;
-        height: 4.5rem;
-        margin: 2px;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 8.4rem;
-    }
-
-    .card img {
-        margin-top: 1.2rem;
-        width: 3rem;
-        height: 3rem
-    }
-
-    .card p {
-        margin-top: 1.7rem;
-    }
-
-    /*----- ARTIST ------*/
-    .textArtists {
-        margin: 2rem 0 2rem 2rem;
-    }
-
-    .textArtists p,
-    .textArtists span {
-        font-size: 1rem;
+        width: 7.9rem;
     }
 }
 
-/*----- MIN  WIDTH 670PX ------*/
-@media (min-width: 670px) {
+/*--- MIN WIDTH 700PX --------*/
+@media (min-width: 700px) {
+    .text {
+        margin-right: 0.8rem;
+    }
 
     /*---- table ----*/
     .table td img {
         width: 9rem;
     }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 8.5rem;
-    }
-
-    /*---- footer ----*/
-    .tableFooter {
-        margin-left: 5.4rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 3rem;
-    }
-
-    .lastLine p {
-        margin-left: 5rem;
-    }
-
-    .icons {
-        margin-left: 2.4rem;
-    }
 }
 
-/*----- MIN  WIDTH 700PX ------*/
-@media (min-width: 700px) {
+/*--- MIN WIDTH 750PX --------*/
+@media (min-width: 750px) {
 
     /*---- table ----*/
     .table td img {
         width: 9.5rem;
-        height: 4.7rem;
-    }
-
-    /*---- card ----*/
-    .card p {
-        margin-top: 1.7rem;
-    }
-
-    .card img {
-        margin-top: 1.5rem;
-        margin-left: 1rem;
     }
 }
 
-/*----- MIN  WIDTH 730PX ------*/
-@media (min-width: 730px) {
+/*--- MIN WIDTH 800PX --------*/
+@media (min-width: 800px) {
     .headerMenu {
-        width: 95%;
+        padding: 0.8rem;
     }
 
     /*---- table ----*/
     .table td img {
-        width: 10rem;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 10rem;
-    }
-
-    /*---- footer ----*/
-    .tableFooter {
-        margin-left: 4rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 4rem;
-    }
-
-    .icons {
-        margin-left: 5rem;
+        width: 10.5rem;
     }
 }
 
-/*----- MIN  WIDTH 800PX ------*/
-@media (min-width: 800px) {
+/*--- MIN WIDTH 850PX --------*/
+@media (min-width: 850px) {
+
+    /*---- group avatars ---*/
+    .groupAvarts img {
+        width: 7rem;
+        height: 3rem;
+    }
+
+    /*---- table ----*/
+    .table td img {
+        width: 11.2rem;
+    }
+
+    /*---- popular of week ---*/
+    .containerPopularWeek img {
+        width: auto;
+    }
+
+    .firstLine img {
+        width: 1.2rem;
+        height: 0.8rem;
+        margin: 0.4rem 0 0 13rem;
+        transition: all 0.7s;
+    }
+
+    .secondLine p,
+    .secondLine .p-jakeliny {
+        padding-right: 14.5rem;
+    }
+
+    .secondLine .joaoInacio {
+        padding-right: 13rem;
+    }
+
+    .secondLine .mayk {
+        padding-right: 13.5rem;
+    }
+}
+
+/*---- MIN WIDTH 900PX ----*/
+@media (min-width: 900px) {
+
+    /*---- header ---*/
+    .connectWallet {
+        padding: 1rem 3.5rem;
+        font-size: 0.8rem;
+    }
+
+    /*--- home ---*/
+    .table td img {
+        width: 12rem;
+    }
+
+    /*--- footer ---*/
+    .icons {
+        margin-left: 13rem;
+    }
+
+    .tableFooter tr td {
+        padding: 0.5rem 4.7rem
+    }
+}
+
+/*---- MIN WIDTH 950PX ----*/
+@media (min-width: 950px) {
+
+    /*--- home ---*/
+    .table td img {
+        width: 12.7rem;
+    }
+}
+
+/*---- MIN WIDTH 1000PX ----*/
+@media (min-width: 1000px) {
+
+    /*--- home ---*/
+    .table td img {
+        width: 13.6rem;
+    }
+}
+
+/*---- MIN WIDTH 1000PX ----*/
+@media (min-width: 1000px) {
+    /*--- home ---*/
+    .table td img {
+        width: 13.9rem;
+    }
+
     .text p {
         font-size: 1rem;
     }
 
-    /*---- table ----*/
-    .table td img {
-        width: 11rem;
-        height: 5.5rem;
-    }
+}
 
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 12rem;
-    }
-
-    /*---- footer ----*/
-    .tableFooter {
-        margin-left: 4rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 5rem;
-    }
-
-    .icons {
-        margin-left: 11rem;
+/*---- MIN WIDTH 1050PX ----*/
+@media (min-width: 1050px) {
+    .table tr td {
+        padding: 5px 0.5rem;
     }
 }
 
-/*----- MIN  WIDTH 830PX ------*/
-@media (min-width: 830px) {
-    .text {
-        margin: 1rem 3rem;
-    }
-
-    .groupAvarts {
-        margin: 2rem 3.2rem;
-    }
-
-    /*---- table ----*/
-    .table {
-        margin: 0 1rem
+/*---- MIN WIDTH 1100PX ----*/
+@media (min-width: 1100px) {
+    .table tr td {
+        padding: 5px 0.7rem;
     }
 
     .table td img {
-        width: 11rem;
-        height: 5.2rem;
-        margin: 2px 5px;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 13rem;
-    }
-
-    .card {
-        width: auto;
-    }
-
-    /*---- footer ----*/
-    .tableFooter {
-        margin-left: 5rem;
-    }
-
-    .tableFooter tr td {
-        padding: 0.5rem 5rem;
-    }
-
-    .lastLine p {
-        margin-left: 6.3rem;
-    }
-
-    .icons {
-        margin-left: 10rem;
+        width: 14.5rem;
+        height: 7rem
     }
 }
 
-/*----- MIN  WIDTH 860PX ------*/
-@media (min-width: 860px) {
-    .table td img {
-        width: 11rem;
-        height: 5rem;
-        margin: 2px 5px;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 14rem;
-    }
-
-    /*---- footer ----*/
-    .tableFooter {
-        margin-left: 5.5rem;
-    }
-
-    .lastLine p {
-        margin-left: 7rem
+/*---- MIN WIDTH 1150PX ----*/
+@media (min-width: 1150px) {
+    .table tr td {
+        padding: 5px 0.9rem;
     }
 }
 
-/*----- MIN  WIDTH 900PX ------*/
-@media (min-width: 900px) {
-    .text {
-        margin: 1rem 0 1rem 4rem;
+/*---- MIN WIDTH 1200PX ----*/
+@media (min-width: 1200px) {
+    .table tr td {
+        padding: 5px 1.2rem;
     }
+}
 
-    .groupAvarts {
-        margin: 2rem 0 2rem 4.2rem;
+/*---- MIN WIDTH 1250PX -----*/
+@media (min-width:1250px) {
+    #home {
+        margin: 2rem 4rem;
     }
 
     .table {
-        margin-left: 2rem;
+        margin: 2rem 3rem;
     }
 
     .table td img {
-        width: 11rem;
-        height: 5rem;
-        margin: 2px 5px;
-    }
-
-    /*---- card -----*/
-    .card {
-        width: auto;
-    }
-
-    .card p {
-        font-size: 0.9rem;
-        margin: 1.6rem 0 0 0.5rem;
-    }
-
-    .card img {
-        width: 3.5rem;
-        height: 3.5rem;
-        margin: 1rem 0.5rem 0 1rem;
-    }
-
-    /*---- POPULAR OF THE WEEK ------*/
-    .containerPopulerWeek {
-        padding: 1rem 0 0 16rem;
-    }
-
-    /*---- footer ----*/
-    .tableFooter {
-        margin-left: 7rem;
-    }
-
-    .lastLine p {
-        margin-left: 8.5rem
-    }
-}
-
-/*----- MIN WIDTH 930PX -------*/
-@media (min-width: 930px) {
-    .table td img {
-        width: 12rem;
-        height: 6rem;
-    }
-
-    /*--- footer ---*/
-    .tableFooter {
-        margin-left: 8.5rem;
-    }
-
-    .lastLine {
-        margin: 2rem auto;
-    }
-}
-
-/*---- MIN WIDTH 1000px -----*/
-@media (min-width: 1000px) {
-    .table td img {
-        width: 13rem
-    }
-
-    /*---- footer ---*/
-    .tableFooter {
-        margin-left: 10rem;
-    }
-
-    .lastline p {
-        margin-left:0;
+        width: 15.2rem;
     }
 }
