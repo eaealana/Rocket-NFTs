@@ -352,7 +352,11 @@ button[type=submit]:hover {
     transform: scale(1.1);
 }
 
-/*--- TABLE ----*/
+/*--- FOOTER ----*/
+.tableFooter {
+    margin: 1rem auto;
+}
+
 .tableFooter tr td {
     padding: 0.5rem 1.5rem;
 }
@@ -420,11 +424,6 @@ button[type=submit]:hover {
 
     .swiper-slide {
         margin: 1rem 0.9rem;
-    }
-
-    /*--- FOOTER ----*/
-    .tableFooter {
-        margin: 1rem auto;
     }
 }
 
@@ -709,6 +708,7 @@ button[type=submit]:hover {
 
 /*---- MIN WIDTH 1000PX ----*/
 @media (min-width: 1000px) {
+
     /*--- home ---*/
     .table td img {
         width: 13.9rem;
